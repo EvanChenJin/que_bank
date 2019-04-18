@@ -1,0 +1,52 @@
+<!--pages/user/userLogin/userLogin.wxml-->
+<view class="container">
+  <!-- to register -->
+  <navigator class="user-reg" open-type="navigate" url="/pages/user/userReg/userReg?login={{login}}">
+  注册</navigator>
+  <!-- login container -->
+  <view class="user-login-cnt">
+    <!-- login welcome -->
+    <view class="user-login-slogan">
+      <text class="user-login-wel">欢迎来到衡真教育</text>
+      <text class="user-login-tip">请输入您的手机号码和密码</text>
+    </view>
+    <!-- login form -->
+    <form bindsubmit="handleLogin">
+      <view class="form-field" 
+            style="{{isMobileFocus ? 'border-bottom: 2rpx solid #5ECC13;' : 'border-bottom: 2rpx solid #EAEAEA;'}}">
+        <label for="mobile">手机号码</label>
+        <input type="text" value="{{mobile}}" name="mobile" id="mobile" bindfocus="handleFocus"               bindblur="handleBlur" bindinput="handleMobile"/>
+      </view>
+      <!-- password login -->
+      <view wx:if="{{psdLogin}}" class="form-field" 
+            style="{{isPsdFocus ? 'border-bottom: 2rpx solid #5ECC13;' : 'border-bottom: 2rpx solid #EAEAEA;'}}">
+        <label for="password">密码</label>
+        <input type="text" password="false" name="password" id="password" 
+               bindfocus="handleFocus" bindblur="handleBlur" />
+      </view>
+      <!-- verify login -->
+      <view wx:if="{{verifyLogin}}" class="form-field" 
+            style="{{isVerifyFocus ? 'border-bottom: 2rpx solid #5ECC13;' : 'border-bottom: 2rpx solid #EAEAEA;'}}">
+        <label for="verifyCode">验证码</label>
+        <input type="number" name="code" id="verifyCode" bindfocus="handleFocus" bindblur="handleBlur"
+               bindtap="handleVerifyCode"/>
+        <button class="form-fied-oper" disabled="{{disabled}}"
+                bindtap="handleVerifyCode">{{verifyText}}
+        </button>
+      </view>
+      <!-- login button -->
+      <view class="form-field">
+        <button class="login-btn" form-type="submit" type="primary" size="default">登录</button>
+      </view>
+    </form>
+    <!-- toggle login type -->
+    <view class="login-other-info flex-layout">
+      <view class="login-toggle-way">
+        <text wx:if="{{psdLogin}}" bindtap="handleToggleToVerify">手机验证码登陆</text>
+        <text wx:if="{{verifyLogin}}" bindtap="handleToggleToPsd">密码登陆</text>
+      </view>
+      <navigator class="find-psd" open-type="navigate" 
+      url="/pages/user/userReg/userReg?action=findPsd&login={{login}}">找回密码</navigator>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,141 @@
+/* pages/community/commDetail/commDetail.wxss */
+@import "../../../common/templateStyle/topBar.wxss";
+/* discuss detail */
+.community-detail-cnt {
+  padding: 40rpx 20rpx 108rpx 20rpx;
+  width:710rpx;
+}
+.community-discuss-item {
+  padding: 40rpx;
+  background: #fff;
+  border-radius: 6rpx;
+}
+.community-poster {
+  margin-bottom: 30rpx;
+  height: 62rpx;
+}
+.community-poster image {
+  float: left;
+  margin-right: 25rpx;
+  width: 62rpx;
+  height: 62rpx;
+}
+.community-poster-info {
+  float: left;
+  font-size: 20rpx;
+  color: #BEC8BF;
+}
+.community-poster-name {
+  display: block;
+  padding-bottom: 8rpx;
+  font-size: 24rpx;
+  color: #768979;
+}
+.community-poster-title {
+  margin-bottom: 16rpx;
+  display: block;
+  font-size: 30rpx;
+  color: #404040;
+  line-height: 45rpx;
+}
+.community-poster-img image {
+  margin: 0 24rpx 16rpx 0;
+  width: 180rpx;
+  height: 180rpx;
+}
+.community-poster-comment {
+  margin-top: 26rpx;
+  font-size: 20rpx;
+  color: #BEC8BF;
+}
+.poster-like-num {
+  display: inline-block;
+}
+.poster-like-num image {
+  margin-right: 14rpx;
+  width: 18rpx;
+  height: 17rpx;
+}
+.poster-like-num text {
+  margin-right: 40rpx;
+}
+.poster-comment-num {
+  padding-left: 24rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAYAAADwMZRfAAABRElEQVQ4T6XTPU8CQRAG4Pc9QugsEFsSbY20GBsIoSCxp9IY/QXGxs67YCOFMbGxQxubqykoOBca5LBS/KitVYxSEeHGQETxEj04tpvdnWdns7OEa5RqpXBQC20RWAUYAyQMsAVKUwTFD6dTyKxkWqNpHAYiwopd2RFwD5AZN/4T810g+6l48pCk9OcHiGmagUg0cgpw/e9k1wpx/vz4tJHNZnsDRNlKF4ExNvC9kbnUclJn1a7O9+A8QBCaHEHXYW+Rlq0OKNj1AQxShMjzol65BiTmFwFw10fe/n8ND57oTI8AbVp1dUNgyfd1BLdUdXUkwLZvBDxm+aq8oDmB+6meuF+BdakMEvrk1Xw127DtZ6NzZwTWxobcbW+IoSUaiU0RnAAIekBtAXK/PqCqqYxozHs03CvAJoiig24hHU+/jB70Cdvjgyjsvp) no-repeat left center;
+    background-size: 16rpx 16rpx;
+}
+/* comment part */
+.comment-panel {
+  padding: 40rpx 20rpx 20rpx;
+  background: #fff;
+  border-top: 2rpx solid #EAEAEA;
+}
+.comment-panel-header {
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  color: #414141;
+}
+.comment-item {
+  display: flex;
+  padding: 40rpx 22rpx;
+  line-height: 1;
+  border-bottom: 2rpx solid #EAEAEA;
+}
+.comment-item image {
+  margin-right: 25rpx;
+  width: 52rpx;
+  height: 52rpx;
+  border-radius: 50%;
+}
+.comment-des text {
+  display: block;
+  font-size: 20rpx;
+}
+.comment-des .comment-name {
+  padding-bottom: 24rpx;
+  color: #768979;
+}
+.comment-des .comment-content {
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  color: #818181;
+  line-height: 1.5;
+}
+.comment-date {
+  color: #BEC8BF;
+}
+/* public comment */
+.my-comment {
+  padding: 0 10rpx 0 30rpx;
+  width: 710rpx;
+  height: 98rpx;
+  background: #fff;
+}
+.my-comment textarea {
+  float: left;
+  margin: 22rpx 30rpx 0 0;
+  padding: 16rpx 25rpx 0 25rpx;
+  width: 420rpx;
+  height: 38rpx;
+  line-height: 1.2;
+  background: #F2F2F2;
+  border-radius: 30rpx;
+  font-size: 20rpx;
+  color: #99A59A;
+}
+.comment-word {
+  float: left;
+  margin-top: 38rpx;
+  font-size: 20rpx;
+  color: #B6B6B6;
+}
+.make-comment-btn {
+  float: right;
+  margin: 20rpx 0 0 0;
+  font-size: 24rpx;
+  color: #419AFF;
+  background: #fff;
+}
+.make-comment-btn:after {
+  border: none;
+}

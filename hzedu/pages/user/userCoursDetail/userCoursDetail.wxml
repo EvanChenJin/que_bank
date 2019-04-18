@@ -1,0 +1,83 @@
+<!--pages/user/userCoursDetail/userCoursDetail.wxml-->
+<view class="container">
+   <view class="user-course-chapter-cnt">
+      <!-- chapter have sub-level -->
+      <view wx:if="{{!!chapterList}}">
+        <block wx:for="{{chapterList}}" wx:for-item="chapterItem" wx:key="{{index}}">
+          <view class="user-course-chapter">
+            <!-- chapter name -->
+            <view class="chapter-name" data-index="{{index}}" bindtap="handleLevelTwo"
+              style="{{chapterItem.isOpen ? '' : 'border-bottom: 2rpx solid #E5E5E5;'}}" >
+              <text>{{chapterItem.name}}</text>
+              <image wx:if="{{!chapterItem.isOpen}}" src="../../../assets/images/btn-down.png"/>
+              <image wx:if="{{chapterItem.isOpen}}" src="../../../assets/images/btn-up.png"/>
+            </view>
+            <!-- chapter sub-level list -->
+            <view class="chapter-list" style="{{chapterItem.isOpen ? 'display: block;' : 'display: none;'}}">
+               <block wx:for="{{chapterItem.video}}" wx:for-item="lessonItem" wx:key="{{lessonItem.id}}">
+                  <view class="chapter-item">
+                      <navigator class="chapter-item-top" open-type="navigate" 
+                      url="/pages/user/userCoursPlay/userCoursPlay?vid={{lessonItem.id}}&name={{lessonItem.name}}&teacher={{lessonItem.teacher.name}}">
+                        <image class="chapter-item-img" src="{{lessonItem.teacher.headimg}}"/>
+                        <text class="chapter-item-name ellipsis-one">{{lessonItem.name}}</text>
+                        <text class="chapter-item-teacher">{{lessonItem.teacher.name}}</text>
+                        <navigator class="chapter-video" open-type="navigate" 
+                        url="/pages/user/userCoursPlay/userCoursPlay?vid={{lessonItem.id}}&name={{lessonItem.name}}&teacher={{lessonItem.teacher.name}}">
+                          <image src="../../../assets/images/btn-myclassPlay.png"/>
+                        </navigator>  
+                      </navigator>
+                      <view class="chapter-item-bottom flex-layout">
+                        <view class="chapter-des">
+                            <image wx:if="{{lessonItem.islearn == 0}}" src="../../../assets/images/class-over.png"/>
+                            <image wx:if="{{lessonItem.islearn == 1}}" src="../../../assets/images/class-hover.png"/>
+                            <text wx:if="{{lessonItem.islearn == 0}}">未学习</text>
+                            <text wx:if="{{lessonItem.islearn == 1}}">已学习</text>
+                        </view>
+                        <view class="chapter-des">
+                            <image wx:if="{{lessonItem.ppt}}" src="../../../assets/images/yun-hover.png"/>
+                            <image wx:if="{{!lessonItem.ppt}}" src="../../../assets/images/yun-over.png"/>
+                            <text wx:if="{{lessonItem.ppt}}">下载讲义</text>
+                            <text wx:if="{{!lessonItem.ppt}}">暂无讲义</text>
+                        </view>
+                      </view>
+                  </view>
+               </block>
+            </view>
+          </view>
+        </block>
+      </view>
+      <!-- chapter have no sub-level -->
+      <view wx:if="{{!!lessonList}}" class="chapter-list">
+          <block wx:for="{{lessonList}}" wx:for-item="lessonItem2" wx:key="{{lessonItem2.id}}">
+              <view class="chapter-item">
+                  <!-- chapter top -->
+                  <navigator class="chapter-item-top" open-type="navigate" 
+                  url="/pages/user/userCoursPlay/userCoursPlay?vid={{lessonItem2.id}}&name={{lessonItem2.name}}&teacher={{lessonItem2.teacher.name}}">
+                    <image class="chapter-item-img" src="{{lessonItem2.teacher.headimg}}"/>
+                    <text class="chapter-item-name ellipsis-one">{{lessonItem2.name}}</text>
+                    <text class="chapter-item-teacher">{{lessonItem2.teacher.name}}</text>
+                    <navigator class="chapter-video" open-type="navigate" 
+                    url="/pages/user/userCoursPlay/userCoursPlay?vid={{lessonItem2.id}}&name={{lessonItem2.name}}&teacher={{lessonItem2.teacher.name}}">
+                          <image src="../../../assets/images/btn-myclassPlay.png"/>
+                      </navigator> 
+                  </navigator>
+                  <!-- chapter bottom -->
+                  <view class="chapter-item-bottom flex-layout">
+                      <view class="chapter-des">
+                          <image wx:if="{{lessonItem2.islearn == 0}}" src="../../../assets/images/class-over.png"/>
+                          <image wx:if="{{lessonItem2.islearn == 1}}" src="../../../assets/images/class-hover.png"/>
+                          <text wx:if="{{lessonItem2.islearn == 0}}">未学习</text>
+                          <text wx:if="{{lessonItem2.islearn == 1}}">已学习</text>
+                      </view>
+                      <view class="chapter-des">
+                          <image wx:if="{{lessonItem2.ppt}}" src="../../../assets/images/yun-hover.png"/>
+                          <image wx:if="{{!lessonItem2.ppt}}" src="../../../assets/images/yun-over.png"/>
+                          <text wx:if="{{lessonItem2.ppt}}">下载讲义</text>
+                          <text wx:if="{{!lessonItem2.ppt}}">暂无讲义</text>
+                      </view>
+                  </view>
+              </view> 
+          </block>      
+      </view>
+   </view>
+</view>

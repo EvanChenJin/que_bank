@@ -1,0 +1,145 @@
+@import "../../../common/templateStyle/partText.wxss";
+/* tab */
+.tab {
+  padding-left: 30rpx;
+  width: 720rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: #fff;
+}
+.tab text {
+  margin-right: 125rpx;
+  font-size: 30rpx;
+  color: #4E4E4E;
+}
+.tab .tab-active {
+  padding-bottom: 10rpx;
+  color: #47B100;
+  border-bottom: 2rpx solid;
+}
+/* main content */
+.main-cont {
+  padding-bottom: 100rpx;
+  width: 100%;
+  background: #f4f4f4;
+}
+.subject-classify {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40rpx auto 10rpx;
+  padding: 0 20rpx;
+  width: 670rpx;
+  height: 146rpx;
+  background: #fff;
+  border-radius: 6rpx;
+  box-shadow: 0rpx 2rpx 3rpx 0 #F3F3F3;
+}
+
+
+.subject-item {
+  text-align: center;
+}
+.subject-item image {
+  display: block;
+  margin: 0 auto;
+  width: 48rpx;
+  height: 48rpx;
+}
+.subject-item text {
+  font-size: 24rpx;
+  color: #809174;
+}
+/* subject list */
+.subject-list {
+  padding: 0 20rpx;
+  width: 710rpx;
+}
+.subject {
+  padding: 50rpx 0;
+  border-bottom: 2rpx solid #e8e8e8;
+}
+.subject-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.subject-icon {
+  margin-right: 26rpx;
+}
+.subject-icon image {
+  display: block;
+  width: 24rpx;
+  height: 24rpx;
+}
+/* subject content */
+.subject-des {
+  align-items: center;
+  width: 660rpx;
+}
+.subject-txt {
+  line-height: 1;
+}
+.subject-tit {
+  display: block;
+  margin-bottom: 16rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #203C0D;
+}
+.subject-tit-two {
+  font-size: 24rpx;
+  font-weight: normal;
+}
+.subject-progress image {
+  margin-right: 14rpx;
+  width: 26rpx;
+  height: 25rpx;
+}
+.subject-progress text {
+  margin-left: 36rpx;
+  font-size: 20rpx;
+  color: #8FA084;
+}
+.subject-price {
+  font-size: 24rpx;
+  color: #FF7D44;
+}
+.subject-btn {
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 0 40rpx;
+  width: 120rpx;
+  height: 48rpx;
+  line-height: 1;
+  border-radius: 0;
+}
+.subject-btn image {
+  width: 120rpx;
+  height: 48rpx;
+  vertical-align: middle;
+}
+.continue {
+  font-size: 20rpx;
+  color: #4FBF00;
+}
+.arrow {
+  margin-left: 36rpx;
+  width: 16rpx;
+  height: 34rpx;
+  vertical-align: middle;
+}
+/* level two */
+.subject-level-two {
+  width: 660rpx;
+  padding-left: 50rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAx0lEQVQoU4XSWwrCMBCF4X/EtRmfbJeigqiorXdUvGzF9KlxbcJIo5V6i3kLk3xnhkT4s8yZhBpX12IdOiqhYsOSCkz9GWEUwn5CTctUIa0GqTK+xKy+hX+FTMYMJfGNKHsV6kD73hiTPGL5jn1A70ge00MRk3EMYS+QscyBySNt5yL61WRjOZUYkLiIRVl/Qg3LQmD8CykvNDOOqnT8Xkld7MOLkeEFUbYuZhB6TWM5AN0qVsy+RBl5VdjkLYb//lZRr2ICsxvBu0aDN1akQwAAAABJRU5ErkJggg==) no-repeat top left;
+    background-size: 18rpx 9rpx;
+}
+.subject-des-two {
+  margin-top: 40rpx;
+}
+.subject-tit-two {
+  font-size: 24rpx;
+  color: #4A6A33;
+}

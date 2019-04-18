@@ -1,0 +1,77 @@
+@import "../../../common/templateStyle/partText.wxss";
+/* tab */
+.tab {
+  padding-left: 30rpx;
+  width: 720rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: #fff;
+}
+.tab text {
+  margin-right: 125rpx;
+  font-size: 30rpx;
+  color: #4E4E4E;
+}
+.tab .tab-active {
+  padding-bottom: 10rpx;
+  color: #47B100;
+  border-bottom: 2rpx solid;
+}
+/* course list */
+.course-list {
+  padding: 0 20rpx 40rpx 20rpx;
+  width: 710rpx;
+}
+.course-item {
+  margin-top: 40rpx;
+  padding: 40rpx 0 40rpx 40rpx;
+  background: #fff;
+  border-radius: 6rpx;
+}
+.course-item text {
+  display: block;
+}
+.course-item-title {
+  padding-right: 47rpx;
+  margin-bottom: 32rpx;
+  font-size: 30rpx;
+  color: #404040;
+  line-height: 45rpx;
+}
+/* course description */
+.course-item-info {
+  align-items: flex-end;
+}
+.course-teacher {
+  margin-right: 40rpx;
+}
+.course-teacher image {
+  margin-bottom: 24rpx;
+  width: 62rpx;
+  height: 62rpx;
+}
+.course-teacher text {
+  font-size: 20rpx;
+  color: #768979;
+  line-height: 1;
+}
+.course-sale {
+  padding-top: 16rpx;
+  width: 187rpx;
+  height: 75rpx;
+  line-height: 1;
+  text-align: right;
+  border-radius: 50rpx 0 0 50rpx;
+  box-shadow: -3rpx 3rpx 4rpx 0 #F9F9F9;
+}
+.course-price {
+  padding-right: 40rpx;
+  padding-bottom: 14rpx;
+  font-size: 30rpx;
+  color: #FF9533;
+}
+.course-pnum {
+  padding-right: 24rpx;
+  font-size: 20rpx;
+  color: #a8a8a8;
+}

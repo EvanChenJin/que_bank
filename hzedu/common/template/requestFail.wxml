@@ -1,0 +1,10 @@
+<template name="requestFail">
+    <view wx:if="{{isShow}}" class="request-fail">
+      <image src="../../../assets/images/request-fail-img.png"/>
+      <view class="request-fail-text">
+        <text>数据加载失败</text>
+        <text>网络或服务器延时，请稍后再试</text>
+      </view>
+      <button>刷新页面</button>
+    </view>
+</template>

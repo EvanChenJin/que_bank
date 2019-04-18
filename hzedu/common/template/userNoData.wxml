@@ -1,0 +1,10 @@
+<template name="haveNoData">
+    <view wx:if="{{!isNoData}}" class="user-no-data">
+      <image src="{{imgUrl}}"/>
+      <text>{{noDataText}}</text>
+      <navigator wx:if="{{isAddressBtn}}" open-type="navigate" 
+                 url="/pages/user/userAddressAdd/userAddressAdd?action=add">
+          添加地址
+      </navigator>
+    </view>
+</template>

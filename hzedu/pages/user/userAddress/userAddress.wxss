@@ -1,0 +1,59 @@
+/* pages/user/userAddress/userAddress.wxss */
+.address-cnt {
+  width: 100%;
+}
+/* address list */
+.user-address-list {
+  margin: 40rpx 0 64rpx;
+  padding-bottom: 36rpx;
+  background: #fff;
+}
+/* address */
+.user-address-item {
+  width: 650rpx;
+  padding: 0 60rpx 0 40rpx;
+  background: #fff;
+  border-bottom: 2rpx solid #E5E5E5;
+}
+.user-adress-info {
+  width: 570rpx;
+  font-size: 24rpx;
+  color: #1E1E1E;
+}
+.user-adress-per-info {
+  padding: 40rpx 0 24rpx 0;
+  line-height: 1;
+}
+.user-address-name {
+  margin-right: 30rpx;
+}
+.user-address-text {
+  padding-bottom: 34rpx;
+  color: #5f5f5f;
+  line-height: 1.5;
+}
+/* addrss check */
+.user-address-check image {
+  width: 42rpx;
+  height: 42rpx;
+}
+/* address operation */
+.user-address-oper image {
+  display: block;
+  width: 24rpx;
+  height: 26rpx;
+}
+.user-address-delete {
+  margin-bottom: 31rpx;
+}
+/* add adresss btn address management */
+.user-address-add-bnt {
+  margin-bottom: 20rpx;
+  width: 100%;
+  height: 76rpx;
+  line-height: 76rpx;
+  font-size: 24rpx;
+  color: #419AFF;
+  text-align: center;
+  background: #fff;
+}

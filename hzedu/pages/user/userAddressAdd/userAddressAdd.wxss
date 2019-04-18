@@ -1,0 +1,41 @@
+/* pages/user/userAddressAdd/userAddressAdd.wxss */
+.add-address-cnt {
+  padding: 60rpx 72rpx 0 65rpx;
+  width: 613rpx;
+}
+.add-address-item {
+  margin-bottom: 20rpx;
+  align-items: flex-end;
+  line-height: 1;
+}
+.add-address-item label {
+  display: block;
+  width: 98rpx;
+  font-size: 24rpx;
+  color: #5f5f5f;
+}
+.add-address-item input, .add-address-item picker-view {
+  padding-left: 12rpx;
+  width: 490rpx;
+  font-size: 24rpx;
+  color: #4A4A4A;
+  border-bottom: 1rpx solid #C2C2C2;
+}
+.add-address-item picker-view {
+  padding-left: 0;
+  width: 502rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+}
+/* address btn */
+.add-address-btn button {
+  margin-top: 60rpx;
+  height: 66rpx;
+  font-size: 24rpx;
+  color: #419AFF;
+  background-color: #fff;
+}
+.add-address-btn button:after {
+  border: none;
+}

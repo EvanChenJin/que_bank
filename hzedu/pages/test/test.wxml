@@ -1,0 +1,21 @@
+<!--pages/test/test.wxml-->
+<view class="container">
+    <scroll-view scroll-x="true" scroll-into-view="element{{curIndex}}" scroll-with-animation="true"
+                 bindscroll="handleBindscroll">
+        <view id="element1">
+            1
+        </view>
+        <view id="element2">
+            2
+        </view>
+        <view id="element3">
+            3
+        </view>
+        <view id="element4">
+            4
+        </view>
+        <view id="element5">
+            5
+        </view>
+    </scroll-view>
+</view>

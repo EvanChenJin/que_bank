@@ -1,0 +1,57 @@
+<!--pages/community/commDetail/commDetail.wxml-->
+<view class="container">
+  <view class="community-detail-cnt">    
+    <view class="community-discuss-item">
+        <!-- discuss personal info -->
+        <view class="community-poster">
+          <image src="{{bbsDetail.headimg}}"/>
+          <view class="community-poster-info">
+            <text class="community-poster-name">{{bbsDetail.name}}</text>
+            <text>{{bbsDetail.ctime}}</text>
+          </view>
+        </view>
+        <!-- dicuss content -->
+        <view class="community-poster-content">
+          <text class="community-poster-title">{{bbsDetail.content}}</text>
+          <view class="community-poster-img">
+              <block wx:for="{{bbsDetail.pictures}}" wx:for-item="picItem" 
+                     wx:for-index="picIndex" wx:key="{{picIndex}}">
+                  <image mode="widthFix" src="{{picItem}}"/>
+              </block>
+          </view>
+        </view>
+        <!-- discuss comment info -->
+        <view class="community-poster-comment">
+          <view class="poster-like-num">
+            <image src="../../../assets/images/icon-praise.png"/>
+            <text class="poster-read-num">{{bbsDetail.clicks}}</text>
+          </view>
+          <text class="poster-comment-num">{{bbsDetail.comments}}</text>
+        </view>
+    </view>
+    <!-- comment list -->
+    <view class="comment-panel">
+      <view class="comment-panel-header"><text>全部评论</text></view>
+      <view class="comment-panel-body">
+        <block wx:for="{{commentList}}" wx:for-item="commentItem" wx:key="{{commentItem.id}}">
+           <view class="comment-item">
+              <image src="{{commentItem.headimg}}"/>
+              <view class="comment-des">
+                <text class="comment-name">{{commentItem.name}}</text>
+                <text class="comment-content">{{commentItem.content}}</text>
+                <text class="comment-date">{{commentItem.ctime}}</text>
+              </view> 
+          </view>
+        </block>
+      </view>
+    </view>
+    <!-- public comment -->
+    <form class="my-comment fixed-bottom" bindsubmit="handleMakeComment">
+      <textarea type="text" placeholder="我也说两句..." name="comment" fixed="true"
+                value="{{commentVal}}" bindinput="handleMaxInput"/>
+      <text class="comment-word">{{commentLen}}/{{maxLen}}</text>
+      <button class="make-comment-btn" form-type="submit" confirm-type="send" size="mini"
+              disabled="{{disabled}}">发表</button>
+    </form>
+  </view>
+</view>

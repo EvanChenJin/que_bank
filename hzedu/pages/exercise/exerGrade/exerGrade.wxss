@@ -1,0 +1,42 @@
+/* pages/exercise/exerGrade/exerGrade.wxss */
+@import "../../../common/templateStyle/topBar.wxss";
+/* grade */
+.grade {
+  padding-top: 176rpx;
+  text-align: center;
+}
+.grade-cnt {
+  position: relative;
+}
+.grade-img {
+  width: 687rpx;
+  height: 771rpx;
+}
+.grade-text {
+  position: absolute;
+  top: 316rpx;
+  left: 50%;
+  display: block;
+  margin-left: -160rpx;
+  width: 320rpx;
+  font-size: 72rpx;
+  color: #fff;
+  text-align: center;
+}
+.grade-number {
+  font-size: 132rpx;
+}
+/* grade operation */
+.grade-oper {
+  margin-top: 30rpx;
+  padding: 0 140rpx;
+  width: 470rpx;
+}
+.grade-oper navigator {
+  width: 142rpx;
+  height: 51rpx;
+}
+.grade-oper image {
+  width: 142rpx;
+  height: 51rpx;
+}

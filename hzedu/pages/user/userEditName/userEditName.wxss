@@ -1,0 +1,33 @@
+/* pages/user/userEditName/userEditName.wxss */
+.edit-name-cnt {
+  padding: 30rpx 20rpx 0 20rpx;
+  width: 710rpx;
+}
+.eidt-name-input {
+  position: relative;
+  padding-bottom: 23rpx;
+  border-bottom: 2rpx solid #6DD172;
+}
+.eidt-name-input input {
+  padding-left: 22rpx;
+  font-size: 30rpx;
+  color: #010101;
+}
+.eidt-name-input button {
+  position: absolute;
+  right: 0;
+  top: 6rpx;
+  z-index: 9;
+  font-size: 24rpx;
+  color: #419AFF;
+  background: #f4f4f4;
+}
+.eidt-name-input button:after {
+  border: none;
+}
+.edit-name-tip {
+  padding-left: 10rpx;
+  margin-top: 28rpx;
+  font-size: 20rpx;
+  color: #9c9c9c;
+}

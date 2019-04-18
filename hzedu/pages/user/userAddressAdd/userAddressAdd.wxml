@@ -1,0 +1,53 @@
+<!--pages/user/userAddressAdd/userAddressAdd.wxml-->
+<view class="container">
+    <!-- add address info -->
+    <form class="add-address-cnt" bindsubmit="handleAddAddress">
+        <view class="add-address-item flex-layout">
+          <label>姓名</label>
+          <input type="text" name="name" value="{{addressEdit.name}}"></input>
+        </view>
+        <view class="add-address-item flex-layout">
+          <label>电话</label>
+          <input type="text" name="mobile" value="{{addressEdit.mobile}}"></input>
+        </view>
+        <view class="add-address-item flex-layout">
+          <label>省份</label>
+          <picker-view bindchange="handleProChange" value="{{[0]}}" bindtap="handleProStart">
+            <picker-view-column>
+                <view wx:for="{{province}}" wx:for-item="pItem" wx:for-index="pIndex" wx:key="{{pIndex}}">
+                   {{pItem.name}}
+                </view>
+            </picker-view-column> 
+          </picker-view>
+        </view>
+        <view class="add-address-item flex-layout">
+          <label>城市</label>
+          <picker-view bindchange="handleCityChange" value="{{[0]}}">
+            <picker-view-column>
+                <view wx:for="{{city}}" wx:for-item="cItem" wx:for-index="cIndex" wx:key="{{cIndex}}">
+                    {{cItem.name}}
+                </view>
+            </picker-view-column>
+          </picker-view>
+        </view>
+        <view class="add-address-item flex-layout">
+          <label>区</label>
+          <picker-view value="{{[0]}}" bindchange="handleDistChange">
+            <picker-view-column>
+                <view wx:for="{{district}}" wx:for-item="dItem" wx:for-index="dIndex" wx:key="{{dIndex}}">
+                    {{dItem.name}}
+                </view>
+            </picker-view-column>
+          </picker-view>
+        </view>
+        <view class="add-address-item flex-layout">
+          <label>详细地址</label>
+          <input type="text" name="detail" value="{{addressEdit.detail}}"></input>
+        </view>
+        <view class="add-address-btn">
+          <button form-type="submit" type="default" disabled="{{disable}}">
+              {{action == 'edit' ? '保存' : '添加'}}
+          </button>
+        </view>
+    </form>
+</view>

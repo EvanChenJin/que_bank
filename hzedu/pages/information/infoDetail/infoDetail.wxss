@@ -1,0 +1,30 @@
+/* pages/information/infoDetail/infoDetail.wxss */
+/* top bar */
+@import "../../../common/templateStyle/topBar.wxss";
+/* article */
+.article-title {
+  padding: 70rpx 20rpx 38rpx 20rpx;
+  font-size: 36rpx;
+  color: #000;
+  line-height: 1.5;
+}
+.article-relate {
+  padding-left: 21rpx;
+  font-size: 20rpx;
+  color: #768979;
+}
+.article-date {
+  margin-left: 93rpx;
+}
+/* article content */
+.article-content {
+  padding: 0 21rpx 100rpx 21rpx;
+}
+.article-content text {
+  display: block;
+  padding-top: 39rpx;
+  font-size: 30rpx;
+  color: #484848;
+  line-height: 56rpx;
+  text-indent: 40rpx;
+}

@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<import src="../../../common/template/requestData.wxml"/>
+<import src="../../../common/template/requestFail.wxml"/>
+<view class="container">
+    <view class="info-category">
+       <text class="category-national {{isActive ? 'category-active' : ''}}">国家电网</text>
+       <text  class="{{isActive ? '' : 'category-active'}}">南方电网</text>
+    </view>
+    <swiper class="info-swiper"
+            indicator-dots="{{swiperConfig.indicatorDots}}"
+            autoplay="{{swiperConfig.autoplay}}"
+            interval="{{swiperConfig.interval}}"
+            duration="{{swiperConfig.duration}}"
+            indicator-color="{{swiperConfig.indicatorColor}}"
+            indicator-active-color="{{swiperConfig.indicatorActiveColor}}"
+            circular="{{true}}">
+      <block wx:for="{{swiperData}}" wx:for-item="swiperItem">
+        <swiper-item wx:key="{{swiperItem.pageUrls}}">
+          <navigator open-type="navigate" url="{{swiperItem.pageUrls}}">
+            <image src="{{swiperItem.imgUrls}}"/>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper> 
+    <view class="info-list">
+      <view class="title">
+        <text class="txt">考务资讯</text>
+      </view>
+      <view class="list">
+         <block wx:for="{{listData}}" wx:for-item="infoItem">
+            <navigator class="item" open-type="navigate" url="{{infoItem.pageUrl}}" wx:key="{{infoItem.pageUrl}}">
+              <image class="item-img" src="{{infoItem.imgUrl}}"/>
+              <view class="item-des">
+                <view class="item-title ellipsis-two">
+                  <text>{{infoItem.des}}</text>
+                </view>
+                <view class="item-addition">
+                  <text class="item-time">{{infoItem.time}}</text>
+                  <text class="item-num">{{infoItem.num}}</text>
+                </view>
+              </view>
+            </navigator>
+         </block>
+      </view>
+    </view>
+    <template is="requestData" data="{{isShow: false}}"/>
+    <template is="requestFail" data="{{isShow: false}}"/>
+</view>

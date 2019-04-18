@@ -1,0 +1,44 @@
+<import src="../../../common/template/partText.wxml"/>
+<view class="container">
+   <template is="partText" data="{{partName: '社区'}}"/>   
+   <view class="community-content">
+      <!-- community img -->
+      <view class="community-img"><image src="../../../assets/images/banner-communityPic.png"/></view>
+      <!-- community list -->
+      <view class="community-discuss-list">
+         <block wx:for="{{bbsList}}" wx:for-item="bbsItem" wx:key="{{bbsItem.id}}">
+            <navigator class="community-discuss-item" open-type="navigate" 
+            url="/pages/community/commDetail/commDetail?pid={{bbsItem.id}}">
+              <!-- discuss top -->
+              <view class="community-poster">
+                <image src="{{bbsItem.headimg}}"/>
+                <view class="community-poster-info">
+                  <text class="community-poster-name">{{bbsItem.name}}</text>
+                  <text>{{bbsItem.ctime}}</text>
+                </view>
+              </view>
+              <!-- discuss content -->
+              <view class="community-poster-content">
+                <text class="community-poster-title">{{bbsItem.content}}</text>
+                <view class="community-poster-img">
+                   <block wx:if="{{bbsItem.pictures}}" wx:for="{{bbsItem.pictures}}" 
+                          wx:for-item="imgItem" wx:key="{{index}}">
+                      <image src="{{imgItem}}"/>
+                   </block>
+                   <!-- <image wx:if="{{!!bbsItem.pictures}}" src="{{bbsItem.pictures}}"/> -->
+                </view>
+              </view>
+              <!-- discuss comment -->
+              <view class="community-poster-comment">
+                <text class="poster-read-num">{{bbsItem.clicks}}</text>
+                <text class="poster-comment-num">{{bbsItem.comments}}</text>
+              </view>
+            </navigator>
+        </block>
+      </view>
+      <!-- public btn -->
+      <navigator class="public-news" open-type="navigate" url="/pages/community/commpublic/commPublic">
+        <image src="../../../assets/images/btn-pub.png"/>
+      </navigator>
+   </view>
+</view>

@@ -1,0 +1,104 @@
+<import src="../../../common/template/partText.wxml"/>
+<view class="container">
+  <template is="partText" data="{{partName: '练习'}}"/>
+  <view class="tab">
+    <text class="{{isNationalActive ? 'tab-active' : ''}}" data-index="1" 
+          bindtap="handleToggleCate">{{national.name[0].tname}}</text>
+    <text class="{{isSouthActive ? 'tab-active' : ''}}" data-index="2" 
+          bindtap="handleToggleCate">{{south.name[0].tname}}</text>
+  </view>
+  <view class="main-cont">
+    <view class="subject-classify">
+      <!-- function list  -->
+      <navigator class="subject-item" open-type="navigate" 
+          url="/pages/exercise/exerZt/exerZt?tid={{tid}}">
+          <image src="../../../assets/images/icon-linian.png"/>
+          <text>历年真题</text>
+      </navigator>
+      <navigator class="subject-item" open-type="navigate" 
+          url="/pages/exercise/exerCollection/exerCollection?tid={{tid}}&action=collect">
+          <image src="../../../assets/images/icon-shouc.png"/>
+          <text>收藏</text>
+      </navigator>
+      <navigator class="subject-item" open-type="navigate"
+          url="/pages/exercise/exerCtb/exerCtb?tid={{tid}}&action=wrong">
+          <image src="../../../assets/images/icon-cuotb.png"/>
+          <text>错题本</text>
+      </navigator>
+      <view class="subject-item" bindtap="toZnExam">
+          <image src="../../../assets/images/icon-zhineng.png"/>
+          <text>智能组卷</text>
+      </view>
+    </view>
+    <!-- subject list -->
+    <view class="subject-list">
+      <!-- 第二级分类 -->
+      <block wx:for="{{isNationalActive ? national.child.name : south.child.name}}"
+             wx:for-item="classifyItem" wx:for-index="classifyIndex" wx:key="{{classifyItem.tid}}">
+          <view class="subject">
+              <!-- subject level two -->
+              <view class="subject-level subject-flex" bindtap="handleSubList" 
+                    data-index="{{classifyIndex}}">
+                  <view class="subject-icon">
+                    <image style="display: {{ classifyItem.isOpen ? 'none': 'block'}}" 
+                          src="../../../assets/images/btn-lianxi-open.png"/>
+                    <image style="display: {{ classifyItem.isOpen ? 'block': 'none'}}" 
+                          src="../../../assets/images/btn-lianxi-up.png"/>
+                  </view>
+                  <view class="subject-des subject-flex">
+                    <view class="subject-txt">
+                      <text class="subject-tit">{{classifyItem.tname}}</text>
+                      <view class="subject-progress">
+                          <block wx:for="{{classifyItem.progressIcon}}" wx:key="{{index}}">
+                            <image src="{{item}}"/>
+                          </block>
+                          <text>{{classifyItem.num_history}}/{{classifyItem.num}}</text>
+                      </view>
+                    </view>
+                    <view><image class="arrow" src="../../../assets/images/icon-my-more.png"/></view>
+                  </view>
+              </view>
+              <!-- subject level three -->
+              <view class="subject-level-two" style="display: {{classifyItem.isOpen ? 'block': 'none'}}">
+                 <!-- 第三级分类 -->
+                 <block wx:for="{{classifyItem.subject}}" wx:for-item="subjectItem" 
+                        wx:for-index="subjectIndex" wx:key="{{subjectItem.sid}}">
+                    <view class="subject-des subject-des-two subject-flex" data-cindex="{{classifyIndex}}" 
+                          data-sindex="{{subjectIndex}}" bindtap="handleNavToChapter">
+                        <view class="subject-txt">
+                          <text class="subject-tit subject-tit-two">{{subjectItem.sname}}</text>
+                          <view class="subject-progress">
+                            <block wx:for="{{subjectItem.progressIcon}}" wx:for-item="img" wx:key="{{index}}">
+                              <image src="{{img}}"></image>
+                            </block>
+                            <text>{{subjectItem.complete_num}}/{{subjectItem.sub_num}}</text>
+                          </view>
+                        </view>
+                        <view>
+                            <view wx:if="{{subjectItem.is_free == '0'}}">
+                                <text wx:if="{{subjectItem.last_chid}}" class="continue">继续上次</text>
+                                <image class="arrow" src="../../../assets/images/icon-my-more.png"/>
+                            </view>
+                            <view wx:if="{{subjectItem.is_free == '1'}}" class="flex-layout">
+                                <block wx:if="{{ subjectItem.buy == '0' }}">
+                                  <text class="subject-price">￥{{subjectItem.true_price}}</text>
+                                  <button class="subject-btn" data-cindex="{{classifyIndex}}" 
+                                          data-sindex="{{subjectIndex}}" bindtap="handleSubjectBuy"
+                                          disabled="{{disabled}}">
+                                    <image src="../../../assets/images/btn-lianxibuy.png"/>
+                                  </button> 
+                                </block>
+                                <block wx:if="{{ subjectItem.buy == '1' }}">         
+                                    <text wx:if="{{subjectItem.last_chid}}" class="continue">继续上次</text>
+                                    <image class="arrow" src="../../../assets/images/icon-my-more.png"/>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                 </block>
+              </view>
+          </view>
+      </block>
+    </view>
+  </view>
+</view>

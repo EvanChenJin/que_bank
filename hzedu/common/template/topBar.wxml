@@ -1,0 +1,9 @@
+<template name="topBar">
+    <view class="topBar">
+      <navigator class="back" open-type="navigate" url="{{backUrl}}">
+        <image src="../../../assets/images/btn-back.png"/>
+        <text wx:if="{{isNeedText}}">返回</text>
+      </navigator>
+      <text wx:if="{{isNeedTitle}}" class="topTitle" style="left: {{toLeft}};">{{title}}</text>
+    </view>
+</template> 

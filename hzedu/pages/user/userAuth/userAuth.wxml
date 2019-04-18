@@ -1,0 +1,9 @@
+<!--pages/user/userAuth/userAuth.wxml-->
+<view class="container">
+    <view>
+        <view class="login-des">欢迎来到电网帮，请授权登录</view>
+        <button type="primary" open-type="getUserInfo" bindgetuserinfo="handleWxAuth">
+          微信授权登录
+        </button>
+    </view>
+</view>

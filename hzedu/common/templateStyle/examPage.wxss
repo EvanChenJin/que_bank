@@ -1,0 +1,185 @@
+/* 做题页公共样式 */
+@import "./topBar.wxss";
+/* question */
+.question-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  padding: 0 45rpx;
+  width: 660rpx;
+  height: 33px;
+  line-height: 33px;
+  border-top: 2rpx solid #f4f4f4;
+  background-color: #fff;
+}
+.question-type {
+  font-size: 30rpx;
+  color: #47B100;
+}
+.question-number {
+  font-size: 24rpx;
+  color: #A8A8A8;
+}
+/* question content */
+.question-content {
+  padding: 78rpx 21rpx 400rpx 21rpx;
+  font-size: 30rpx;
+}
+.question-stem {
+  margin-bottom: 46rpx;
+  line-height: 1.5;
+  color: #0F0F0F;
+}
+.question-options .options-item {
+  display: block;
+  padding: 15rpx 10rpx 15rpx 26rpx;
+  margin-bottom: 41rpx;
+  color: #828282;
+  background: #fff;
+  border: 1rpx solid #fff;
+  border-radius: 48rpx;
+  line-height: 1.4; 
+}
+/* right and wrong answer style */
+.question-options .option-right {
+  color: #79D331;
+  background: #E9FBDC;
+  border: 1rpx solid;
+}
+.question-options .option-wrong {
+  color: #FF654E;
+  background: #FFE4E0;
+  border: 1rpx solid;
+}
+.answer-card-body .option-right {
+  color: #79D331;
+  background: #E9FBDC;  
+}
+.answer-card-body .option-wrong {
+  color: #FF654E;
+  background: #FFE4E0;
+}
+
+.question-parse {
+  margin-top: 23rpx;
+  padding: 43rpx 28rpx 29rpx 28rpx;
+  width: 654rpx;
+  background: #fff;
+  border-radius: 9rpx;
+}
+.question-answer {
+  margin-bottom: 50rpx;
+  font-size: 30rpx;
+}
+.right-answer {
+  margin-right: 26rpx;
+  color: #5AAF22;
+}
+.your-answer {
+  color: #FF7966;
+}
+.parse-content {
+  font-size: 24rpx;
+  color: #656565;
+  line-height: 45rpx;
+}
+/* question operation */
+.question-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 15rpx 130rpx;
+  width: 490rpx;
+  height: 21px;
+  line-height: 21px;
+  font-size: 24rpx;
+  color: #ADADAD;
+  background: #fff;
+}
+.question-collect image {
+  margin-right: 12rpx;
+  width: 42rpx;
+  height: 40rpx;
+  vertical-align: top;
+}
+.question-progress {
+  padding-left: 56rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAACTklEQVRYR+2ZsU4bQRCG/3FBGwPpwhv4DXbsNwl1ikQCEZGQBiWiAAclSqSkoYU3sXffwI+QNFGIa6R40aI7cz7uboe72QLJ1+7s78+zu7f/bxMij3Putff+I4CF9/5kOBz+iM0J47PZbGM+n58DeAlgSzKnouYfgMt+v39ITQLT6fSYiD4Va4jogzHmLPbB1tpvAPZidcLxcS1oFWQuKoG11v7NOnkD4JCIrowx1xKwyWSy2ev1dgGEFdkAcF0J2gQphbXW+lBLRPvGmO8SwHKNtfY9gLvVewAqgZTAFkC3pZ0sgzrntrz3YWVWQR8DGYPNQZm58RzEOr38wnlhG8gm2CSgXSDrYNVBrbUHAL7ElkAyTkRvjDE/Q20K0D8AnktABDW/mflFKtA5gGcCCEnJL2beSQKaXZGiazFGSkSvjDEXSUCDqHPuyHt/GgOJjL9l5q95jfoezYU7wq5AJutoR9gHkMlBW2yDSsgiKBHpX6GP7GwtZAm0iyl5B2BcaUqEsI2QGeiKzVssFpej0SgY4egjtnkR2ChkBqppnD9HnU0hivwnouP8PRlrSyGKBAO8GauvGZdFkZbiSaZFO5rkU1uIknZaHAwGISPpp1DttMjMRwkO05i00yIzb1e9njqnUO20mGckbd3Q0TzWqlx1FaAquktQrbRYBtXSXYOqG2dtwfXSrzuavfbWp76FsbmbUt5C2lvq6b1HtdJi8iu040/Yy7SobEruU2jZ5nVNi3U2r6tu2KOqaZGZwx8E4XCp6hajiEparIgiKrq3Xe1/MxDkDz4AAAAASUVORK5CYII=) no-repeat left center;
+  background-size: 42rpx 42rpx;
+}
+/* answer-card */
+.answer-card {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  padding-top: 40rpx;
+  width: 750rpx;
+  background-color: #f4f4f4;
+}
+.answer-card-header {
+  padding: 0 20rpx;
+  width: 710rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  background: #fff;
+}
+.answer-card-number {
+  float: right;
+  margin-right: 22rpx;
+}
+.answer-card-body {
+  padding: 0 20rpx;
+  margin-right: -24rpx;
+  height: 280rpx;
+  width: 710rpx;
+  background: #fff;
+}
+.answer-card-body view {
+  float: left;
+  margin: 0 15rpx 24rpx 0;
+  width: 56rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #2B2B2B;
+  background: #F4F4F4;
+  border-radius: 50%;
+}
+.answer-card-footer {
+  padding: 0 20rpx 108rpx 20rpx;
+  width: 710rpx;
+  background: #fff;
+}
+.answer-card-footer button {
+  margin-bottom: 26rpx;
+  height: 70rpx;
+  font-size: 24rpx;
+  color: #78E800;
+  border: 1rpx solid;
+}
+.answer-card-close {
+  position: absolute;
+  top: 16rpx;
+  right: 16rpx;
+}
+.answer-card-close image {
+  width: 48rpx;
+  height: 48rpx;
+}
+/* question-swiper */
+.question-swiper {
+  padding: 33px 0 35px;
+  width: 100%;
+}
+/* multiple select */
+.multipleSelect {
+  width: 100%;
+  height: 76rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background: #00C901;
+}

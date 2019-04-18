@@ -1,0 +1,45 @@
+<import src="../../../common/template/userNoData.wxml"/>
+<view class="container">  
+  <view class="address-cnt">
+     <!-- have no address -->
+     <template is="haveNoData" data="{{isNoData: isHaveAddress, imgUrl: '../../../assets/images/user-no-address.png', noDataText: '暂无地址', isAddressBtn: true}}"/>
+     <!-- have address -->
+     <view wx:if="{{isHaveAddress}}">
+        <!-- address list -->
+        <view class="user-address-list">  
+          <block wx:for="{{addressList}}" wx:for-item="addressItem" wx:key="{{addressItem.id}}">
+              <view class="user-address-item flex-layout">
+                <view class="user-adress-info">
+                    <view class="user-adress-per-info">
+                      <text class="user-address-name">{{addressItem.name}}</text>
+                      <text>{{addressItem.mobile}}</text>
+                    </view>
+                    <view class="user-address-text">
+                      {{addressItem.province + addressItem.city + addressItem.district + addressItem.detail}}
+                    </view>
+                </view>
+                <!-- edit address -->
+                <view id="{{addressItem.id}}" data-index="{{index}}" bindtap="handleChooseAddress">
+                    <view wx:if="{{!isOperate}}" class="user-address-check" >
+                       <image src="{{addressItem.isChecked ? '../../../assets/images/icon-sitCheckede.png' : '../../../assets/images/icon-site-Nocheckede.png'}}"/>
+                    </view>
+                    <view wx:if="{{isOperate}}" class="user-address-oper">
+                      <image class="user-address-delete" src="../../../assets/images/icon-site-del.png"
+                      bindtap="handleDeteleAddress"
+                      data-index="{{index}}"/>
+                      <image src="../../../assets/images/icon-site-edit.png" 
+                      bindtap="handleEditAddress" 
+                      data-index="{{index}}"/>
+                    </view>   
+                </view>
+              </view>
+          </block>
+        </view>
+        <view class="user-address-add-bnt" bindtap="handleManageAddress"><text>管理地址</text></view>
+        <!-- add address -->
+        <navigator class="user-address-add-bnt" open-type="navigate" url="/pages/user/userAddressAdd/userAddressAdd?action=add">
+           + 添加新地址
+        </navigator>
+    </view>
+  </view>
+</view>

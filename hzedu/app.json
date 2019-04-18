@@ -1,0 +1,84 @@
+{
+  "pages":[  
+    "pages/information/infoIndex/infoIndex",
+    "pages/information/infoDetail/infoDetail",
+    "pages/exercise/exerIndex/exerIndex",
+    "pages/exercise/exerZt/exerZt",
+    "pages/exercise/exerClassify/exerClassify",
+    "pages/exercise/exerCtb/exerCtb",
+    "pages/exercise/exerParse/exerParse",
+    "pages/exercise/exerCollection/exerCollection",
+    "pages/exercise/question/question",
+    "pages/exercise/exerGrade/exerGrade",
+    "pages/course/courIndex/courIndex",
+    "pages/course/courDetail/courDetail",
+    "pages/course/courPay/courPay",
+    "pages/community/commIndex/commIndex",
+    "pages/community/commDetail/commDetail",
+    "pages/community/commpublic/commPublic",
+    "pages/user/userAuth/userAuth",
+    "pages/user/userIndex/userIndex",
+    "pages/user/userEdit/userEdit",
+    "pages/user/userEditName/userEditName",
+    "pages/user/userCourseList/userCourseList",
+    "pages/user/userCoursDetail/userCoursDetail",
+    "pages/user/userCoursPlay/userCoursPlay",
+    "pages/user/userOrder/userOrder",
+    "pages/user/userAddress/userAddress",
+    "pages/user/userAddressAdd/userAddressAdd",
+    "pages/user/userLogin/userLogin",
+    "pages/user/userReg/userReg",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电网帮",
+    "navigationBarTextStyle":"black",
+    "onReachBottomDistance": 30
+  },
+  "tabBar": {
+    "color": "#B2C1A7",
+    "selectedColor": "#46AF00",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/information/infoIndex/infoIndex",
+        "text": "考讯",
+        "iconPath": "assets/images/icon-indexOver.png",
+        "selectedIconPath": "assets/images/icon-indexHover.png"
+      },
+      {
+        "pagePath": "pages/exercise/exerIndex/exerIndex",
+        "text": "做题",
+        "iconPath": "assets/images/icon-zuotiOver.png",
+        "selectedIconPath": "assets/images/icon-zuotiHover.png"
+      },
+      {
+        "pagePath": "pages/course/courIndex/courIndex",
+        "text": "看课",
+        "iconPath": "assets/images/iocn-classOver.png",
+        "selectedIconPath": "assets/images/icon-classHover.png"
+      },
+      {
+        "pagePath": "pages/community/commIndex/commIndex",
+        "text": "社区",
+        "iconPath": "assets/images/icon-communityOver.png",
+        "selectedIconPath": "assets/images/icon-comHover.png"
+      },
+      {
+        "pagePath": "pages/user/userIndex/userIndex",
+        "text": "我的",
+        "iconPath": "assets/images/icon-myOver.png",
+        "selectedIconPath": "assets/images/icon-myHover.png"
+      }
+    ]
+  },
+  "plugins": {
+    "wxparserPlugin": {
+      "version": "0.2.1",
+      "provider": "wx9d4d4ffa781ff3ac"
+    }
+  }
+}

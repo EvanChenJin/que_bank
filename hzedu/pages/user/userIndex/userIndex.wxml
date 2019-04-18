@@ -1,0 +1,37 @@
+<view class="container">
+  <!-- user base info -->
+  <view class="user-header">
+    <view class="user-base-info">
+      <image class="user-avatar" src="{{userInfo.headimg}}"/>
+      <text class="user-nickname">{{userInfo.name}}</text>
+      <text class="user-tel">{{userInfo.mobile}}</text>
+    </view>
+  </view>
+  <!-- user main info -->
+  <view class="user-body">
+    <!-- user purchase info -->
+    <view class="user-info-top common-panel flex-layout">
+       <block wx:for="{{userInfoPart}}" wx:key="{{index}}">
+          <navigator class="user-info-item" open-type="navigate" url="{{item.url}}">
+              <image src="{{item.iconPath}}"/>
+              <text>{{item.partText}}</text>
+          </navigator>
+       </block> 
+    </view>
+    <!-- user common info  -->
+    <view class="user-info-bottom common-panel">
+       <navigator class="user-info-part" open-type="navigate" url="/pages/user/userEdit/userEdit">
+            编辑信息
+       </navigator>
+       <navigator class="user-info-part" open-type="navigate"
+                  url="/pages/exercise/exerCollection/exerCollection?tid={{tid}}&action=collect">
+            收藏考题
+       </navigator>
+       <navigator class="user-info-part" open-type="navigate" 
+                  url="/pages/exercise/exerCtb/exerCtb?tid={{tid}}&action=wrong">
+            错题本
+       </navigator>
+       <view class="user-info-part user-info-part-loginout" bindtap="handleLoginOut">退出</view>
+    </view>
+  </view>
+</view>

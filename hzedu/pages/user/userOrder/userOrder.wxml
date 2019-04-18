@@ -1,0 +1,38 @@
+<!--pages/user/userOrder/userOrder.wxml-->
+<import src="../../../common/template/userNoData.wxml"/>
+<view class="container">
+   <view>
+      <!-- have no order -->
+      <template is="haveNoData" data="{{isNoData: isHaveOrder, imgUrl: '../../../assets/images/user-no-order.png',     noDataText: '暂无订单', isAddressBtn: false}}"/>
+      <!-- have order -->
+      <view wx:if="{{isHaveOrder}}" class="common-cnt">
+        <!-- order item -->
+        <block wx:for="{{orderList}}" wx:for-item="orderItem" wx:key="{{orderItem.id}}">
+          <view class="common-panel user-order-item">
+          <!-- order number -->
+          <view class="user-order-number">
+            <text class="user-order-num-text">订单号</text>
+            <text class="user-order-num-detail">{{orderItem.order_sn}}</text>
+          </view>
+          <!-- order coure -->
+          <view class="user-order-des">
+            <image class="user-order-img" src="{{orderItem.headimg}}"/>
+            <view class="user-order-course-info">
+                <text class="user-order-name ellipsis-one">{{orderItem.order_name}}</text>
+                <text class="user-order-date">订单日期：{{orderItem.endtime}}</text>
+                <text class="user-order-price">￥{{orderItem.sale_price}}</text>
+            </view>
+          </view>
+          <!-- order personal info -->
+          <view class="user-order-per-info">
+            <text class="user-order-address">{{orderItem.address}}</text>
+            <view>
+              <text>{{orderItem.name}}</text>
+              <text class="user-order-person-tel">{{orderItem.mobile}}</text>
+            </view>
+          </view>
+        </view>
+        </block>
+      </view>
+   </view>
+</view>

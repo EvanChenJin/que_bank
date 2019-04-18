@@ -1,0 +1,62 @@
+<!--pages/course/courDetail/courDetail.wxml-->
+<view class="container">
+    <view class="course-detail-cont">
+      <!-- course intro -->
+      <view class="course-item">
+        <text class="course-item-title">{{courseDetail.class.name}}</text>
+        <view class="course-item-info flex-layout">
+          <view class="course-teacher-list flex-layout">
+            <view class="course-teacher">
+              <image mode="widthFix" src="{{courseDetail.teacher.headimg}}"/>
+              <text>{{courseDetail.teacher.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- course detail -->
+      <view class="course-detail-panel">
+        <view class="course-detail-tab flex-layout">
+          <text class="tab-item {{tab === 1 ? 'tab-item-active': ''}}" data-index="1" 
+          bindtap="handleToggleTab">课程介绍</text>
+          <text class="tab-item {{tab === 2 ? 'tab-item-active': ''}}" data-index="2"
+          bindtap="handleToggleTab">课程表</text>
+          <text class="tab-item {{tab === 3 ? 'tab-item-active': ''}}" data-index="3"
+          bindtap="handleToggleTab">老师介绍</text>
+        </view>
+        <!-- course detail item -->
+        <view class="course-detail-content">
+          <view class="course-detail-intro" style="{{tab === 1 ? 'display: block': 'display: none'}}">
+             <block wx:for="{{courseDetail.class.images}}" wx:key="{{index}}">
+                <image mode="widthFix" src="{{item}}"/>
+             </block>
+          </view>
+          <view class="course-detail-kcb" style="{{tab === 2 ? 'display: block': 'display:none'}}">
+             <block wx:for="{{courseDetail.class.course}}" wx:for-item="chapterItem" wx:key="{{index}}">
+                <view class="kcb-item">
+                  <text class="kcb-item-title ellipsis-one">{{chapterItem.course_name}}</text>
+                  <text class="kcb-item-des">{{courseDetail.teacher.name}} -{{chapterItem.course_time}}</text>
+                </view>
+             </block>
+          </view>
+          <view class="course-detail-teacher" style="{{tab === 3 ? 'display: block': 'display: none'}}">
+            <view class="teacher-cont flex-layout">
+              <image src="{{courseDetail.teacher.headimg}}"/>
+              <view class="teacher-des">
+                <text class="teacher-name">{{courseDetail.teacher.name}}</text>
+                <text class="teacher-intro">{{courseDetail.teacher.description}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- purchase bar -->
+    <view class="course-pur-bar flex-layout">
+      <text class="course-pur-num"> 已有 {{courseDetail.class.displaynum}} 人购买该课程</text>
+      <text class="course-pur-price">￥{{courseDetail.class.price}}</text>
+      <navigator class="course-pur-btn" open-type="navigate" 
+        url="/pages/course/courPay/courPay?cid={{courseDetail.class.id}}&name={{courseDetail.class.name}}&price={{courseDetail.class.price}}">
+        <image src="../../../assets/images/btn-lianxibuy.png"/>
+      </navigator>
+    </view>
+</view>

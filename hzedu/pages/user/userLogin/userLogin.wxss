@@ -1,0 +1,82 @@
+/* top style */
+page {
+  background: #fff;
+}
+.container {
+  background: #fff;
+}
+/* to register */
+.user-reg {
+  padding-right: 50rpx;
+  width: 700rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+   text-align: right;
+  font-size: 24rpx;
+  color: #3F3F3F;
+}
+/* register area */
+.user-login-cnt {
+  padding: 110rpx 120rpx 0 120rpx;
+  width: 510rpx;
+}
+.user-login-slogan {
+  padding-bottom: 127rpx;
+  line-height: 1;
+}
+.user-login-wel {
+  display: block;
+  margin-bottom: 18rpx;
+  font-size: 36rpx;
+  color: #383F2A;
+}
+.user-login-tip {
+  font-size: 20rpx;
+  color: #8C8C8C;
+}
+/* register field */
+.form-field {
+  position: relative;
+  margin-bottom: 50rpx;
+  line-height: 1;
+}
+.form-field label {
+  display: block;
+  padding-bottom: 40rpx;
+  font-size: 24rpx;
+  color: #595C52;
+}
+.form-field input {
+  padding-bottom: 23rpx;
+  font-size: 30rpx;
+  color: #242424;
+}
+.form-fied-oper {
+  position: absolute;
+  bottom: 25rpx;
+  right: 6rpx;
+  z-index: 9;
+  font-size: 20rpx;
+  color: #7E7E7E;
+  background: #fff;
+}
+.form-fied-oper:after {
+  border: none;
+}
+.form-field-tel {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+}
+.login-btn {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #fff;
+  background: #6EE120;
+}
+/* login-other-info */
+.login-other-info {
+  font-size: 20rpx;
+  color: #858585;
+}

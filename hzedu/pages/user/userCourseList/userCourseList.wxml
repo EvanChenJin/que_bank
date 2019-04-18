@@ -1,0 +1,20 @@
+<!--pages/user/userCourseList/userCourseList.wxml-->
+<import src="../../../common/template/userNoData.wxml"/>
+<view class="container">
+   <view>
+      <!-- have no course -->
+      <template  is="haveNoData" data="{{isNoData: isHaveCourse, imgUrl: '../../../assets/images/user-no-course.png',     noDataText: '暂无课程', isAddressBtn: false}}"/>
+      <!-- have course -->
+      <view wx:if="{{isHaveCourse}}" class="common-cnt">
+        <block wx:for="{{courseList}}" wx:for-item="courseItem" wx:key="{{courseItem.id}}">
+          <navigator class="common-panel user-course-item" open-type="navigate" url="/pages/user/userCoursDetail/userCoursDetail?cid={{courseItem.id}}&name={{courseItem.name}}">
+            <image class="user-course-img" src="{{courseItem.thumb}}"/>
+            <view class="user-course-des" >
+              <text class="user-course-name ellipsis-two">{{courseItem.name}}</text>
+              <text class="user-course-expire">有效期: {{courseItem.h_endtime}}</text>
+            </view>
+          </navigator>
+        </block>
+   </view>
+   </view>
+</view>

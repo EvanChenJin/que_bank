@@ -1,0 +1,132 @@
+/**app.wxss**/
+page {
+  background: #F4F4F4;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: "MicrosoftYaHei";
+  background: #F4F4F4;
+} 
+/* layout */
+.flex-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* fixed bottom */
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* 省略 */
+.ellipsis-one {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ellipsis-two {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+/* panel style */
+.common-cnt {
+  padding: 40rpx 20rpx 0 20rpx;
+}
+.common-panel {
+  width: 710rpx;
+  background: #fff;
+  border-radius: 6rpx;
+}
+/* question image */
+.question-content image {
+  display: block;
+  padding-bottom: 20rpx;
+  width: 300rpx;
+}
+/* template style */
+/* user have no data */
+.user-no-data {
+  padding-top: 120rpx;
+}
+.user-no-data image {
+  display: block;
+  margin: 0 auto;
+  width: 360rpx;
+  height: 300rpx;
+}
+.user-no-data text {
+  display: block;
+  margin-top: 31rpx;
+  font-size: 24rpx;
+  color: #757575;
+  text-align: center;
+}
+.user-no-data navigator {
+  margin: 90rpx auto 0;
+  width: 516rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background: #5FCE14;
+  border-radius: 6rpx;
+}
+/* request data */
+.request-data {
+  padding-top: 204rpx;
+  padding-bottom: 204rpx;
+  text-align: center;
+}
+.request-data image {
+  display: block;
+  margin: 0 auto 60rpx;
+  width: 143rpx;
+  height: 143rpx;
+}
+.request-data text {
+  font-size: 24rpx;
+  color: #757575;
+}
+/* request fail */
+.request-fail {
+  padding-top: 140rpx;
+  padding-bottom: 140rpx;
+  text-align: center;
+}
+.request-fail image {
+  width: 360rpx;
+  height: 300rpx;
+}
+.request-fail-text {
+  margin-top: 32rpx;
+  font-size: 24rpx;
+  color: #757575;
+  line-height: 1;
+}
+.request-fail-text text {
+  display: block;
+  margin-bottom: 15rpx;
+}
+.request-fail button {
+  margin-top: 80rpx;
+  width: 200rpx;
+  height: 82rpx;
+  font-size: 30rpx;
+  color: #757575;
+  background: #fff;
+  border: none;
+  border-radius: 50rpx;
+}

@@ -1,0 +1,51 @@
+/* pages/exercise/exerClassify/exerClassify.wxss */
+@import "../../../common/templateStyle/topBar.wxss";
+/* exer chapter list */
+.list {
+  padding: 0 20rpx;
+  width: 710rpx;
+}
+.chpater {
+  padding: 64rpx 0rpx;
+  width: 710rpx;
+  height: 111rpx;
+  border-bottom: 2rpx solid #d5d5d5;
+}
+.chapter-progress {
+  width: 111rpx;
+  height: 111rpx;
+  line-height: 111rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #4A9D00;
+  background: #fff;
+  border-radius: 50%;
+}
+.chapter-des {
+  width: 418rpx;
+}
+.chapter-title {
+  display: block;
+  font-size: 30rpx;
+  color: #404040;
+}
+.chapter-num {
+  font-size: 24rpx;
+  color: #8FA084;
+}
+.chapter-operation {
+  width: 132rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+.chapter-operation text {
+  float: left;
+  margin-right: 36rpx;
+  font-size: 20rpx;
+  color: #4FBF00;
+}
+.chapter-operation image {
+  float: right;
+  width: 16rpx;
+  height: 34rpx;
+}

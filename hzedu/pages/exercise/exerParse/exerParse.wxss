@@ -1,0 +1,2 @@
+/* pages/exercise/exerParse/exerParse.wxss */
+@import "../../../common/templateStyle/examPage.wxss";

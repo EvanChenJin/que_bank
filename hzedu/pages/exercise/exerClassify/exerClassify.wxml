@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="chapter-list">
+     <block wx:for="{{chapterList}}" wx:for-item="chapterItem" wx:key="{{chapterItem.chid}}">
+        <view class="flex-layout chpater" bindtap="handleNavExercise" data-index="{{index}}">
+          <view class="chapter-progress">
+            <text>{{chapterItem.percentage + '%'}}</text>
+          </view>
+          <view class="chapter-des">
+            <text class="chapter-title ellipsis-one">{{chapterItem.chname}}</text>
+            <text class="chapter-num">{{chapterItem.num}}</text>
+          </view>
+          <view class="chapter-operation">
+            <text wx:if="{{chapterItem.my_chid_num && chapterItem.my_chid_num > 0}}">继续上次</text>
+            <image src="../../../assets/images/btn-lianxi-more.png"/>
+          </view>
+        </view>
+     </block>
+   </view>
+</view>

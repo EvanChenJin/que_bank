@@ -1,0 +1,34 @@
+/* pages/exercise/exerZt/exerZt.wxss */
+@import "../../../common/templateStyle/topBar.wxss";
+/* exam */
+.exam-list {
+  padding: 0 20rpx;
+  width: 710rpx;
+}
+.exam {
+  padding: 64rpx 0rpx;
+  width: 100%;
+  height: 70rpx;
+  border-bottom: 2rpx solid #d5d5d5;
+}
+.exam-progress {
+  display: block;
+  width: 69rpx;
+  height: 69rpx;
+  line-height: 24rpx;
+  font-size: 20rpx;
+  color: #333;
+  text-align: center;
+  border: 2rpx solid;
+  border-radius: 50%;
+}
+.exam-title {
+  width: 480rpx;
+  height: 100%;
+  font-size: 27rpx;
+  color: #404040;
+}
+.exam image {
+  width: 16rpx;
+  height: 34rpx;
+}

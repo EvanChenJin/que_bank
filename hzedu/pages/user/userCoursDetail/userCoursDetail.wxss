@@ -1,0 +1,87 @@
+/* pages/user/userCoursDetail/userCoursDetail.wxss */
+.user-course-chapter-cnt {
+  margin-top: 40rpx;
+  padding: 0 20rpx;
+  background: #fff;
+}
+/* chapter have sub-level */
+.user-course-chapter .chapter-list {
+  margin-top: -30rpx;
+}
+.chapter-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 0;
+  width: 710rpx;
+}
+.chapter-name text {
+  margin-left: 11rpx;
+  font-size: 30rpx;
+  color: #404040;
+}
+.chapter-name image {
+  margin-right: 18rpx;
+  width: 21rpx;
+  height: 11rpx;
+}
+/*  hapter have no sub-level */
+.chapter-list {
+  display: block;
+  width: 710rpx;
+}
+/* chapter top */
+.chapter-item-top {
+  padding: 44rpx 33rpx 24rpx 33rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+.chapter-item-img {
+  float: left;
+  margin-right: 45rpx;
+  width: 86rpx;
+  height: 86rpx;
+  vertical-align: middle;
+}
+.chapter-item-name {
+  float: left;
+  display: inline-block;
+  width: 300rpx;
+  font-size: 24rpx;
+  color: #768979;
+}
+.chapter-item-teacher {
+  float: left;
+  font-size: 20rpx;
+  color: #7F7F7F;
+}
+/* chapter bottom */
+.chapter-item-bottom {
+  padding: 20rpx 85rpx;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+.chapter-des image {
+  margin-right: 14rpx;
+  width: 24rpx;
+  height: 22rpx;
+}
+.chapter-des text {
+  font-size: 20rpx;
+  color: #595959;
+}
+/* chapter-video */
+.chapter-video {
+  float: right;
+}
+.chapter-video image {
+  width: 44rpx;
+  height: 28rpx;
+}
+/* display control */
+.hidden {
+  display: none;
+}
+.shown {
+  display: block;
+}

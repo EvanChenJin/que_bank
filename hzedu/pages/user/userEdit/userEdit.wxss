@@ -1,0 +1,35 @@
+/* pages/user/userEdit/userEdit.wxss */
+/* 修改个人信息 */
+.user-edit-list {
+  padding-top: 40rpx;
+}
+.user-edit-item {
+  padding: 40rpx;
+  width: 670rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #fff;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAqCAMAAABvEDDhAAAAilBMVEUAAADCwsLKysrKysrR0dHKysrKysrKysrKysrLy8vKysrKysrKysrLy8vKysrLy8vKysrFxcXKysrKysrKysrKysrKysrKysrLy8vKysrLy8vKysrJycnKysrKysrJycnJycnIyMjLy8vLy8vJycnIyMjOzs7JycnKysrKysrKysrKysrLy8vKysoZ3QlMAAAALXRSTlMAA/sMB/bu1MW0l411X007IBHn2anz5ODMy768op9rRDQuLCcaFxXbrIF+V1RwhaSGAAAAz0lEQVQoz42T6RKCMAyEgXLfl8ipgIJn3//1nEl/OCZR6c/9ZtruJqsFGn9kr/O69ASvSzfjdemceV3uT0R3ANgj1jMXwO6IgekBMB4Y6IMCB/JGIOHcCAgV8In1yABQmhjEFoCWZJLYAOoFg7kCUKQYpAWAfMJgbVQmCQaiA2DFJJNSWY9IJr5yGG7TzSt7j2jZd5ea/Wd6AbmaP+Upf+dAc2tWNudO/JkLnSOd+x1579k9EZ4y+dy2h44a3vh7z2kvtvfIM9neDWxPv/X6BeZ/KQSuyr4sAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: 690rpx center;
+  background-size: 23rpx 42rpx;
+  border-bottom: 2rpx solid #EAEAEA;
+}
+.user-edit-title {
+  float: left;
+  font-size: 30rpx;
+  color: #010101;
+}
+.user-eidt-cont {
+  float: right;
+  margin-right: 106rpx;
+}
+.user-edit-avator {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+.user-edit-nickname {
+  font-size: 24rpx;
+  color: #838787;
+}

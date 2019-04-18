@@ -1,0 +1,15 @@
+<!--pages/user/userEdit/userEdit.wxml-->
+<view class="container">
+   <view class="user-edit-list">
+      <view class="user-edit-item">
+        <text class="user-edit-title">修改头像</text>
+        <image class="user-eidt-cont user-edit-avator" src="{{userAvator}}" bindtap="handleImgChange"/>
+      </view>
+      <navigator class="user-edit-item" open-type="navigate" 
+                 url="/pages/user/userEditName/userEditName">
+        <text class="user-edit-title">修改昵称</text>
+        <text class="user-eidt-cont user-edit-nickname">{{userName}}</text>
+      </navigator>
+   </view>
+
+</view>

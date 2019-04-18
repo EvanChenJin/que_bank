@@ -1,0 +1,29 @@
+<!--pages/information/infoDetail/infoDetail.wxml-->
+<import src="../../../common/template/topBar.wxml"/>
+<view class="container">
+  <template is="topBar" data="{{backUrl: 'pages/information/infoIndex/infoIndex', isNeedText: true, isNeedTitle: false}}"/>
+  <view class="article">
+    <view class="article-title">
+      <text>{{articleData.title}}</text>
+    </view> 
+    <view class="article-relate">
+      <text>来源 : {{articleData.source}}</text>
+      <text class="article-date">日期 : {{articleData.date}}</text>
+    </view>
+    <view class="article-content">
+      <text>{{articleData.content}}</text>
+      <text>针对2018年国家电网考试笔试，衡真教育为大家安
+            排了基础精讲班，考点串讲班，考前练题班，“超高
+            压”集训营，“特高压”集训营，面试集训营等诸多
+            培训班次，以帮助考生更好的复习。报名地址：重庆
+            市九龙坡区石坪桥正街万锦汇西九2514室。报名QQ：2547230936,报名电话：139834775310
+      </text>
+      <text>针对2018年国家电网考试笔试，衡真教育为大家安
+            排了基础精讲班，考点串讲班，考前练题班，“超高
+            压”集训营，“特高压”集训营，面试集训营等诸多
+            培训班次，以帮助考生更好的复习。报名地址：重庆
+            市九龙坡区石坪桥正街万锦汇西九2514室。报名QQ：2547230936,报名电话：139834775310
+      </text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,58 @@
+/* pages/course/courPay/courPay.wxss */
+@import "../../../common/templateStyle/topBar.wxss";
+/* course pay */
+.course-pay-cnt {
+  padding: 40rpx 20rpx 0 20rpx;
+  width: 710rpx;
+}
+.course-pay-panel {
+  padding: 0 30rpx 40rpx;
+  background: #fff;
+  border-radius: 6rpx;
+}
+.course-pay-panel > view, .course-pay-panel > navigator {
+  padding: 40rpx 0;
+  line-height: 1;
+  border-bottom: 2rpx solid #D9D9D9;
+}
+/* course base info */
+.course-pay-top text {
+  display: block;
+  padding-left: 14rpx;
+}
+.course-title {
+  padding-bottom: 30rpx;
+  font-size: 30rpx;
+  color: #404040;
+  line-height: 1.5;
+}
+.course-price {
+  font-size: 36rpx;
+  color: #FF8A00;
+}
+/* personal info */
+.course-pay-bottom {
+  font-size: 24rpx;
+  color: #989898;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAYAAAC58NwRAAABmElEQVQ4T4XTv2pUQRQG8G/ubS6STWpfwSaVhJAY94KFsDtz7r6B4J8UIgQs8hIBQRSLELRItdWdmWV1Se8LiKKiNsaI2lpu5pMTrrLq3ey0Z37z7ztjQgh3ADwguSsij7BgmBjjHsn7AAhgxzn38Dyj4ALJMYCriowx96y1j+cho4UGPQewpYjkXRF50obOgI7hcLhUFIWizWanbWvt/r/oD9CC975jjFG00dzptnPuYBb9BbQwHo+Xp9PpCwDrzU43rbVPf6P/QHO8laIoJgDWAJwCuOWce6a1VjCDjgBcVkTyhogczgUz6CWASwB+Ouc654K6rq9lWeYBaFYTEbk+F3jvS2PMSCcD+JxlWbff739qBSEETV3T15WPU0rdwWDwsfXSo9HoSkpJn1VX/kKyKyIfWp81xrhJUoNbAnCS53nZ6/Xetwbnvd9oUu4A+EqyFJF3ra0RY1wnqcdYBvDNGNO11r5tbb66rtfyPJ+QXAHwPaVUVlX1Zm57hxBOAFwE8ANA6Zx7vegDeZKrKSVbVdWrRV/0Fy2grRWC/a4AAAAAAElFTkSuQmCC) no-repeat 610rpx center;
+  background-size: 11rpx 20rpx;
+}
+.course-person-info {
+  padding: 0 0 20rpx 13rpx;
+}
+.course-person-name {
+  margin-right: 20rpx;
+}
+.course-address {
+  display: block;
+  padding-left: 13rpx;
+  width: 550rpx;
+  line-height: 1.5;
+}
+/* pay btn */
+.course-pay-btn {
+  margin-top: 320rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 24rpx;
+}

@@ -1,0 +1,72 @@
+<!--pages/exercise/question/question.wxml-->
+<view class="container">
+    <!-- question header -->
+    <view class="question-info flex-layout">
+        <text class="question-type">{{examQuestionsArray[currentIndex].queType}}</text>
+        <text class="do-question-time">{{hour}} : {{minute}} : {{second}}</text>
+        <text class="question-number">{{currentIndex + 1}}/{{examQuestionsTotal}}</text>
+    </view>
+    <!-- question body -->
+    <swiper class="question-swiper" style="height: {{clientHeight ? clientHeight + 'px': 'auto'}}"
+            current="{{currentIndex}}" duration="{{duration}}"
+            bindchange="handleQuestionChange">
+      <block wx:for="{{examQuestionsArray}}" wx:for-item="examQuestionItem" wx:key="{{examQuestionItem.qid}}">
+            <swiper-item>
+              <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+                  <view class="question-content">
+                    <view class="question-stem">
+                      <wxparser rich-text="{{examQuestionItem.qtitle}}"/>
+                    </view>
+                    <view class="question-options">
+                       <block wx:for="{{examQuestionItem.options}}" wx:for-item="optionItem" wx:key="{{index}}">
+                          <view wx:if="{{optionItem.text}}" 
+                                class="options-item {{optionItem.isSelected ? 'options-selected': ''}}" 
+                                bindtap="handleSelectOption" data-index="{{index}}">
+                                <wxparser rich-text="{{optionItem.text}}"/>
+                          </view>
+                       </block>
+                    </view>
+                    <!-- 多选题的确认按钮 -->
+                    <button wx:if="{{examQuestionItem.radio === '1'}}" 
+                            class="multipleSelect" type="primary" bindtap="handleMultiSelect">确认选项</button>
+                  </view>
+              </scroll-view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- qeustion operation -->
+    <view class="question-bottom flex-layout">
+      <view class="question-collect" bindtap="handleCollect">
+         <image wx:if="{{examQuestionsArray[currentIndex].is_collection == 0}}" src="../../../assets/images/icon-collectOver.png"/>
+         <image wx:if="{{examQuestionsArray[currentIndex].is_collection == 1}}" src="../../../assets/images/icon-collectHover.png"/>
+         <text>收藏</text>
+      </view>
+      <view class="question-progress" bindtap="handleOpenAnswerCard">
+          {{currentIndex + 1}}/{{examQuestionsTotal}}
+      </view>
+    </view>
+    <!-- answer card -->
+    <view wx:if="{{isAnswerCardOpen}}" class="answer-card">
+       <view class="answer-card-header">
+          <view class="answer-card-title ellipsis-one">{{title}}</view>
+          <text class="answer-card-number">{{currentIndex + 1}}/{{examQuestionsTotal}}</text>
+       </view>
+       <view class="answer-card-body-cnt">
+          <scroll-view class="answer-card-body" scroll-y="true">
+            <block wx:for="{{examQuestionsArray}}" wx:for-item="AnswerItem" 
+                   wx:for-index="answerIndex" wx:key="{{AnswerItem.qid}}">
+                <view class="{{AnswerItem.isDone ? 'question-is-done': ''}}" 
+                      data-index="{{answerIndex}}" bindtap="handleAnswerCard">
+                      {{answerIndex + 1}}
+                </view>
+            </block>
+          </scroll-view>
+       </view>
+       <view class="answer-card-footer">
+          <button type="primary" bindtap="handleSubmitExam">交卷</button>
+       </view>
+       <view class="answer-card-close" bindtap="handleCloseAnswerCard">
+          <image src="../../../assets/images/close.png"/>
+       </view>
+    </view>
+</view>

@@ -1,0 +1,58 @@
+/* pages/user/userCoursPlay/userCoursPlay.wxss */
+/* video play area */
+.course-play-cnt {
+  margin-top: 40rpx;
+  padding: 40rpx 20rpx 36rpx 20rpx;
+  width: 710rpx;
+  line-height: 1;
+  background-color: #fff;
+}
+.course-play-video {
+  width: 100%;
+  height: 360rpx;
+}
+.course-play-name {
+  display: block;
+  margin-top: 24rpx;
+  font-size: 24rpx;
+  color: #768979;
+}
+.course-paly-teacher {
+  display: block;
+  padding-left: 28rpx;
+  margin-top: 24rpx;
+  font-size: 20rpx;
+  color: #7F7F7F;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAVCAMAAAB44J7gAAAAdVBMVEUAAAB/f39/f39/f39/f399fX1/f3+AgIB/f39paWl/f39/f39/f39+fn6AgIB+fn56enqAgIB/f39/f39/f39/f398fHyAgIB/f39/f39/f39/f39/f39/f3+AgIB+fn55eXlzc3N/f3+AgIB/f39+fn5/f3/NulFAAAAAJnRSTlMApbP78SPsz4cD9dhNQTkwGOPeq55tEblyR+PImY9kWA0KvH52Y70pMQMAAAC9SURBVBjTVc7ZkoMgEIXhoyigiPuabSaznPd/xLSIVcl3wQV0NT+CZrrd1rpAlCcZhUqb+OxIdp2Sw0N8G3LZ8twPZN/KxR85PiEKS97DQD8jKK77SJ3RIppYeviSE6KKrPaJX0QPqg2z4/UsGqhz4E6uCL4Uh71TU1l5aNeMZRNWSfjlZ+lJ9TjSNQ+uOnJSajsaM0ztXIdVPMsKw3/Z5ehi+tOwy2FZbohqzQTy15KepAAXfsjgx+TNWL0Af8MSHldGZyYAAAAASUVORK5CYII=) no-repeat left center;
+  background-size: 16rpx 21rpx;
+}
+/* recommend course */
+.course-recommend {
+  margin-top: 40rpx;
+  padding: 40rpx 20rpx; 
+  width: 710rpx;
+  background: #fff;
+}
+.course-recommend-title {
+  font-size: 32rpx;
+  color: #404040;
+}
+/* recommend course item */
+.course-recommend-item {
+  padding: 40rpx 0;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+.course-recommend-des {
+  width: 550rpx;
+}
+.course-recommend-name {
+  display: block;
+  font-size: 24rpx;
+  color: #768979;
+  line-height: 1.5;
+}
+.course-recommend-price {
+  margin-right: 22rpx;
+  font-size: 30rpx;
+  color: #FF8A00;
+}

@@ -1,0 +1,12 @@
+<!--pages/user/userEditName/userEditName.wxml-->
+<view class="container">
+   <view class="edit-name-cnt">
+      <view class="eidt-name-input">
+        <form bindsubmit="handleChangeName">
+           <input type="text" name="val" value="{{userName}}" placeholder-style="color:#010101;"/>
+           <button form-type="submit" type="primary" size="default">保存</button>
+        </form>
+      </view>
+      <text class="edit-name-tip">一个好的名称更容易让你的朋友们记住你</text>
+   </view>
+</view>

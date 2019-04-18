@@ -1,0 +1,23 @@
+<!--pages/exercise/exerZt/exerZt.wxml-->
+<view class="container">
+   <view class="exam-list">
+     <block wx:for="{{examList}}" wx:for-item="examItem" wx:key="{{examItem.paper_id}}">
+        <navigator class="exam flex-layout" open-type="navigate" 
+                   url="/pages/exercise/question/question?paper_id={{examItem.paper_id}}&tips={{examItem.tips}}&title={{examItem.ptitle}}&tid={{tid}}&action=zt">
+          <block>
+             <text wx:if="{{(index+1)%3 == 0}}" style="color: {{circleColor[0]}}" class="exam-progress">
+                <!-- {{examItem.tips}} -->
+             </text>
+             <text wx:if="{{(index+1)%3 == 1}}" style="color: {{circleColor[1]}}" class="exam-progress">
+                <!-- {{examItem.tips}} -->
+             </text>
+             <text wx:if="{{(index+1)%3 == 2}}" style="color: {{circleColor[2]}}" class="exam-progress">
+                <!-- {{examItem.tips}} -->
+             </text>
+          </block>
+          <text class="exam-title ellipsis-two">{{examItem.ptitle}}</text>
+          <image src="../../../assets/images/btn-lianxi-more.png"/>
+        </navigator>
+     </block>
+   </view>
+</view>

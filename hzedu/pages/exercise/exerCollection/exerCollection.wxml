@@ -1,0 +1,34 @@
+<view class="container">
+   <!-- top bar -->
+   <view class="topBar flex-layout" bindtap="handleDeleteCollect">
+      <text>经常梳理收藏的考题可以更高效的帮助学习哦~</text>
+      <image class="delete-btn" src="../../../assets/images/delete.png"/>
+   </view>
+   <!-- collection question -->
+   <view class="collection-list">
+      <block wx:for="{{examQuestionsArray}}" wx:for-item="collectItem" wx:key="{{collectItem.qid}}">
+          <view class="collection" bindtap="handleNavCollect" data-index="{{index}}">
+            <block>
+              <text wx:if="{{(index+1)%3 == 0}}" style="color: {{circleColor[0]}}" 
+              class="collection-progress"></text>
+              <text wx:if="{{(index+1)%3 == 1}}" style="color: {{circleColor[1]}}" 
+              class="collection-progress"></text>
+              <text wx:if="{{(index+1)%3 == 2}}" style="color: {{circleColor[2]}}" 
+              class="collection-progress"></text>
+            </block>
+            <wxparser class="collection-title ellipsis-two" rich-text="{{collectItem.qinfo.qtitle}}"/>
+            <view class="operate-icon" style="{{isDeleteOper ? 'display: block' : 'display: none'}}"
+                  catchtap="handleCancelCollect" data-index="{{index}}">
+              <image style="{{!collectItem.isTap ? 'display: block;' : 'display: none'}}" 
+                     src="../../../assets/images/check-box.png"/>
+              <image style="{{collectItem.isTap ? 'display: block;' : 'display: none'}}"
+                     src="../../../assets/images/check -checked.png"/>
+            </view>
+          </view>
+      </block>
+   </view>
+   <view class="collection-oper" style="{{isDeleteOper && isBtnShow ? 'display: block' : 'display: none'}}">
+      <button type="primary" class="confirm" bindtap="handleConfirmDelete">确认删除</button>
+      <button type="default" class="cancel" bindtap="handleConfirmCancel">取消</button>
+   </view>
+</view>

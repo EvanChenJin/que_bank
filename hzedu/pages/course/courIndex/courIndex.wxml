@@ -1,0 +1,29 @@
+<import src="../../../common/template/partText.wxml"/>
+<view class="container">
+  <template is="partText" data="{{partName: '看课'}}"/>
+  <view class="tab">
+    <text class="{{cat === 1 ? 'tab-active' : ''}}" bindtap="handleCategory" data-index="1">国家电网</text>
+    <text class="{{cat === 2 ? 'tab-active' : ''}}" bindtap="handleCategory" data-index="2">南方电网</text>
+  </view>
+  <!-- course list -->
+  <view class="course-list">
+     <block wx:for="{{courseList}}" wx:for-item="courseItem" wx:key="{{courseItem.id}}">
+        <navigator class="course-item" open-type="navigate" 
+                   url="/pages/course/courDetail/courDetail?cid={{courseItem.id}}&name={{courseItem.name}}">
+            <text class="course-item-title">{{courseItem.name}}</text>
+            <view class="course-item-info flex-layout">
+              <view class="course-teacher-list flex-layout">
+                <view class="course-teacher">
+                  <image mode="widthFix" src="{{courseItem.teacher.headimg}}"/>
+                  <text>{{courseItem.teacher.name}}</text>
+                </view>
+              </view>
+              <view class="course-sale">
+                <text class="course-price">￥{{courseItem.price}}</text>
+                <text class="course-pnum">{{courseItem.displaynum}} 人购买</text>
+              </view>
+            </view>
+        </navigator>
+     </block>
+  </view>
+</view>

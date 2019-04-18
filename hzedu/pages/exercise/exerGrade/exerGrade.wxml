@@ -1,0 +1,23 @@
+<!--pages/exercise/exerGrade/exerGrade.wxml-->
+<view class="container">
+    <view class="grade">
+      <view class="grade-cnt">
+        <image class="grade-img" src="../../../assets/images/img-jieguo.png"/>
+        <text class="grade-text"><text class="grade-number">{{score}}</text>分</text>
+      </view>
+      <view class="grade-oper flex-layout">
+        <navigator open-type="navigate" 
+          url="/pages/exercise/exerParse/exerParse?pact=allparse&cttitle={{title}}&paper_id={{paper_id}}">
+          <image src="../../../assets/images/btn-quanbu.png"/>
+        </navigator>
+        <navigator open-type="navigate" 
+          url="/pages/exercise/exerParse/exerParse?pact=wrongparse&title={{title}}&paper_id={{paper_id}}">
+          <image src="../../../assets/images/btn-cuoti.png"/>
+        </navigator>
+        <navigator open-type="navigate" 
+          url="/pages/exercise/question/question?title={{title}}&paper_id={{paper_id}}&time={{time}}">
+          <image src="../../../assets/images/btn-chongzuo.png"/>
+        </navigator>
+      </view>
+    </view>
+</view>

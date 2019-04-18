@@ -1,0 +1,11 @@
+/* pages/user/userAuth/userAuth.wxss */
+page {
+  height: 100%;
+}
+page .container {
+  justify-content: center;
+}
+.login-des {
+  padding-bottom: 30rpx;
+  font-size: 30rpx;
+}

@@ -1,0 +1,6 @@
+<template name="requestData">
+    <view wx:if="{{isShow}}" class="request-data">
+      <image src="../../../assets/images/request-img.png"/>
+      <text>请求数据中，请稍后...</text>
+    </view>
+</template>

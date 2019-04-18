@@ -1,0 +1,70 @@
+/* pages/user/userOrder/userOrder.wxss */
+/* order list */
+.user-order-item {
+  margin-bottom: 64rpx;  
+  padding: 40rpx 24rpx 0;
+  width: 662rpx;
+}
+/* order number part */
+.user-order-number {
+  padding-bottom: 23rpx;
+  border-bottom: 2rpx solid #E3E3E3;
+}
+.user-order-num-text {
+  margin-right: 27rpx;
+  font-size: 24rpx;
+  color: #7C7C7C;
+}
+.user-order-num-detail {
+  font-size: 32rpx;
+  color: #535353;
+}
+/* order course info part */
+.user-order-des {
+  padding: 38rpx 0;
+  height: 153rpx;
+}
+.user-order-img {
+  float: left;
+  width: 251rpx;
+  height: 153rpx;
+}
+.user-order-course-info {
+  float: right;
+  width: 385rpx;
+  line-height: 1;
+}
+.user-order-course-info text {
+  display: block;
+}
+.user-order-name {
+  padding: 12rpx 0 24rpx;
+  width: 100%;
+  font-size: 36rpx;
+  color: #232323;
+}
+.user-order-date {
+  padding-bottom: 24rpx;
+  font-size: 20rpx;
+  color: #768979;
+}
+.user-order-price {
+  font-size: 30rpx;
+  color: #FF8A00;
+}
+/* order personal info part */
+.user-order-per-info {
+  padding-bottom: 40rpx;
+  line-height: 1;
+  font-size: 24rpx;
+  color: #7F7F7F;
+}
+.user-order-address {
+  display: block;
+  padding-bottom: 20rpx;
+  line-height: 1.5;
+}
+.user-order-person-tel {
+  margin-left: 50rpx;
+  font-size: 22rpx;
+}

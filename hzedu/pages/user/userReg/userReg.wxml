@@ -1,0 +1,50 @@
+<!--pages/user/userReg/userReg.wxml-->
+<view class="container">
+  <!-- to login -->
+  <navigator class="user-reg" open-type="navigate" url="/pages/user/userLogin/userLogin&login={{login}}">
+      {{isFindPsd ? "去登陆" : "已有账号,去登陆" }}
+  </navigator>
+  <!-- register container -->
+  <view class="user-login-cnt">
+    <view class="user-login-slogan">
+      <text class="user-login-wel">{{isFindPsd ? '重置密码' : '账号注册'}}</text>
+      <text class="user-login-tip">请输入您的手机号码和密码</text>
+    </view>
+    <form bindsubmit="handleRegisterOrPsd">
+      <view class="form-field"
+        style="{{isMobileFocus ? 'border-bottom: 2rpx solid #5ECC13;' : 'border-bottom: 2rpx solid #EAEAEA;'}}">
+        <label for="mobile">手机号码</label>
+        <input type="text" name="mobile" id="mobile" bindinput="handleMobile" 
+               bindfocus="handleFocus" bindblur="handleBlur"/>
+      </view>
+      <view class="form-field"
+          style="{{isVerifyFocus ? 'border-bottom: 2rpx solid #5ECC13;' : 'border-bottom: 2rpx solid #EAEAEA;'}}">
+        <label for="verifyCode">验证码</label>
+        <input type="number" name="code" id="verifyCode"
+               bindfocus="handleFocus" bindblur="handleBlur"/>
+        <button class="form-fied-oper" bindtap="handleVerifyCode" disabled="{{disabled}}">
+          {{verifyText}}
+        </button>
+      </view>
+      <text class="verify-tip-text">我们已向您的手机 {{mobile}} 发送了验证短信请注意查收</text>
+      <view class="form-field"
+            style="{{isPsdFocus ? 'border-bottom: 2rpx solid #5ECC13;' : 'border-bottom: 2rpx solid #EAEAEA;'}}">
+        <label for="password">密码</label>
+        <input type="text" password="true" name="password" id="password"
+               bindfocus="handleFocus" bindblur="handleBlur"/>
+      </view>
+      <view class="form-field" wx:if="{{!isFindPsd}}"
+            style="{{isConfirmPsdFocus ? 'border-bottom: 2rpx solid #5ECC13;' : 'border-bottom: 2rpx solid #EAEAEA;'}}">
+        <label for="confirmPsd">确认密码</label>
+        <input type="text" password="true" name="confirmPsd" id="confirmPsd"
+               bindfocus="handleFocus" bindblur="handleBlur"/>
+      </view>
+      <!-- register or reset-password -->
+      <view class="form-field">
+        <button class="login-btn" form-type="submit" type="primary" size="default">
+           {{isFindPsd ? "重置密码" : "注册" }}
+        </button>
+      </view>
+    </form>
+  </view>
+</view>

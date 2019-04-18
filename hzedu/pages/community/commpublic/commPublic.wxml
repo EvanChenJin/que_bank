@@ -1,0 +1,18 @@
+<!--pages/community/commpublic/commPublic.wxml-->
+<view class="container">
+  <view class="public-cnt">
+    <textarea placeholder="来吧，尽情发挥吧..." value="{{contentVal}}" bindinput="handleInputValue"/>
+    <view class="public-word">至少输入<text>10</text>个字哦，还可输入 <text>{{max - contentValLen}}</text> 字</view>
+    <view class="public-upload">
+      <block wx:for="{{pictures}}" wx:for-item="uploadImgItem" wx:key="{{index}}">
+         <image src="{{uploadImgItem}}"/>
+      </block>
+      <!-- <image src="../../../assets/images/icon-sitCheckede.png"/> -->
+      <button bindtap="handleUploadImg">
+         <image src="../../../assets/images/btn-addPic.png"/>
+      </button>
+    </view>
+    <button class="public-btn" type="default" size="mini" confirm-type="send" 
+    bindtap="handleMakePost" disabled="{{disabled}}">发表</button>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/course/courPay/courPay.wxml-->
+<view class="container">
+  <view class="course-pay-cnt">
+    <view class="course-pay-panel">
+      <!-- course base info -->
+      <view class="course-pay-top">
+        <text class="course-title">{{name}}</text>
+        <text class="course-price">￥{{price}}</text>
+      </view>
+      <!-- course personal info -->
+      <navigator class="course-pay-bottom" open-type="navigate" 
+                 url="/pages/user/userAddress/userAddress">
+        <block wx:if="{{addressData}}">
+           <view class="course-person-info">
+            <text class="course-person-name">{{addressData.name}}</text>
+            <text>{{addressData.mobile}}</text>
+          </view>
+          <text class="course-address">
+              {{addressData.province + addressData.city + addressData.district + addressData.detail }}
+          </text>
+        </block>
+      </navigator>
+    </view>
+    <!-- pay btn -->
+    <button class="course-pay-btn" type="primary" form-type="submit" bindtap="handlePurCourse" disabled="{{disabled}}">
+        去支付
+    </button>
+  </view>
+</view>

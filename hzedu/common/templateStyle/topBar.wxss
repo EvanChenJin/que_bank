@@ -1,0 +1,30 @@
+/*  top bar */
+.topBar {
+  position: relative;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background: #fff;
+}
+.back {
+  float: left;
+}
+.back image {
+  margin-left: 43rpx;
+  width: 23rpx;
+  height: 42rpx;
+  vertical-align: middle;
+}
+.back text {
+   margin-left: 21rpx;
+   font-size: 30rpx;
+   color: #404040;
+}
+.topTitle {
+  position: absolute;
+  top: center;
+  left: 43%;
+  font-size: 36rpx;
+  color: #010101;
+}

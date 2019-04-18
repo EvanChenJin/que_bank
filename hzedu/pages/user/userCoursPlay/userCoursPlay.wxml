@@ -1,0 +1,25 @@
+<!--pages/user/userCoursPlay/userCoursPlay.wxml-->
+<view class="container">
+   <!-- video play area -->
+   <view class="course-play-cnt">
+      <video class="course-play-video" src="{{videoData.playurl}}" poster="{{videoData.cover}}"></video>
+      <text class="course-play-name">{{name}}</text>
+      <text class="course-paly-teacher">{{teacher}}</text>
+   </view>
+   <!-- recommend course -->
+   <view class="course-recommend">
+      <text class="course-recommend-title">推荐课程</text>
+      <view class="course-recommend-list">
+        <!-- recommend course item -->
+        <block wx:for="{{videoData.tops}}" wx:for-item="recommendItem" wx:key="{{recommendItem.id}}">
+            <navigator class="course-recommend-item flex-layout" open-type="navigate" url="/pages/course/courDetail/courDetail?cid={{recommendItem.id}}">
+              <view class="course-recommend-des">
+                <text class="course-recommend-name">{{recommendItem.name}}</text>
+                <text class="course-paly-teacher">{{recommendItem.teacher}}</text>
+              </view>
+              <text class="course-recommend-price">￥{{recommendItem.price}}</text>
+          </navigator>
+        </block>
+      </view>
+   </view>
+</view>

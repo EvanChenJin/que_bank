@@ -1,0 +1,5 @@
+<template name="partText">
+   <view class="part-text">
+      <text>{{partName}}</text>
+    </view>
+</template>

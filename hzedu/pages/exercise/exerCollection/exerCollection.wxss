@@ -1,0 +1,74 @@
+/* pages/exercise/exerCollection/exerCollection.wxss */
+/* top bar */
+.topBar {
+  position: fixed;
+  top: 24rpx;
+  left: 20rpx;
+  width: 670rpx;
+  padding: 0 20rpx;
+  height: 55rpx;
+  font-size: 18rpx;
+  color: #454545;
+  background: #fff;
+}
+.delete-btn {
+  width: 38rpx;
+  height: 40rpx;
+}
+/* collection list */
+.collection-list {
+  padding: 60rpx 20rpx 364rpx 20rpx;
+  width: 710rpx;
+}
+.collection {
+  padding: 64rpx 0rpx;
+  width: 710rpx;
+  height: 74rpx;
+  border-bottom: 2rpx solid #d5d5d5;
+}
+.collection-progress {
+  float: left;
+  display: block;
+  margin-right: 40rpx;
+  width: 69rpx;
+  height: 69rpx;
+  border: 2rpx solid;
+  border-radius: 50%;
+}
+.collection-title {
+  float: left;
+  width: 480rpx;
+  height: 100%;
+  font-size: 28rpx;
+  color: #404040;
+}
+/* collection-operation */
+.collection-oper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 40rpx 20rpx 116rpx;
+  width: 710rpx;
+  background: #f4f4f4;
+}
+.collection-oper button {
+  margin-bottom: 40rpx;
+  height: 64rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+.collection-oper .confirm {
+  background: #00C901;
+}
+.collection-oper .cancel {
+  background: #B3B3B3;
+}
+/* operate icon */
+.operate-icon {
+  margin-top: 19rpx;
+  float: right;
+}
+.operate-icon image {
+  width: 36rpx;
+  height: 36rpx;
+}
